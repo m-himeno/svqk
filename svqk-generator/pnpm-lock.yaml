@@ -27,6 +27,9 @@ importers:
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.18.0
         version: 8.18.0(@typescript-eslint/parser@8.18.0(eslint@9.16.0)(typescript@5.7.2))(eslint@9.16.0)(typescript@5.7.2)
+      braces:
+        specifier: ^3.0.3
+        version: 3.0.3
       coveralls:
         specifier: ^3.1.1
         version: 3.1.1
@@ -66,9 +69,15 @@ importers:
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
+      semver-regex:
+        specifier: ^4.0.5
+        version: 4.0.5
       swagger-typescript-api:
         specifier: ^13.0.23
         version: 13.0.23(encoding@0.1.13)
+      trim-newlines:
+        specifier: ^5.0.0
+        version: 5.0.0
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.10.2)(typescript@5.7.2)
@@ -3350,6 +3359,10 @@ packages:
     resolution: {integrity: sha512-mUdIBBvdn0PLOeP3TEkMH7HHeUP3GjsXCwKarjv/kGmUFOYg1VqEemKhoQpWMu6X2I8kHeuVdGibLGkVK+/5Qw==}
     engines: {node: '>=6'}
 
+  semver-regex@4.0.5:
+    resolution: {integrity: sha512-hunMQrEy1T6Jr2uEVjrAIqjwWcQTgOAcIM52C8MY1EZSD3DDNft04XzvYKPqjED65bNVVko0YI38nYeEHCX3yw==}
+    engines: {node: '>=12'}
+
   semver-truncate@1.1.2:
     resolution: {integrity: sha512-V1fGg9i4CL3qesB6U0L6XAm4xOJiHmt4QAacazumuasc03BvtFGIMCduv01JWQ69Nv+JST9TqhSCiJoxoY031w==}
     engines: {node: '>=0.10.0'}
@@ -3730,6 +3743,10 @@ packages:
   trim-newlines@2.0.0:
     resolution: {integrity: sha512-MTBWv3jhVjTU7XR3IQHllbiJs8sc75a80OEhB6or/q7pLTWgQ0bMGQXXYQSrSuXe6WiKWDZ5txXY5P59a/coVA==}
     engines: {node: '>=4'}
+
+  trim-newlines@5.0.0:
+    resolution: {integrity: sha512-kstfs+hgwmdsOadN3KgA+C68wPJwnZq4DN6WMDCvZapDWEF34W2TyPKN2v2+BJnZgIz5QOfxFeldLyYvdgRAwg==}
+    engines: {node: '>=14.16'}
 
   ts-api-utils@1.4.3:
     resolution: {integrity: sha512-i3eMG77UTMD0hZhgRS562pv83RC6ukSAC2GMNWc+9dieh/+jDM5u5YG+NHX6VNDRHQcHwmsTHctP9LhbC3WxVw==}
@@ -7573,6 +7590,8 @@ snapshots:
 
   semver-regex@2.0.0: {}
 
+  semver-regex@4.0.5: {}
+
   semver-truncate@1.1.2:
     dependencies:
       semver: 5.7.2
@@ -8018,6 +8037,8 @@ snapshots:
   treeverse@3.0.0: {}
 
   trim-newlines@2.0.0: {}
+
+  trim-newlines@5.0.0: {}
 
   ts-api-utils@1.4.3(typescript@5.7.2):
     dependencies:
