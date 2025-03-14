@@ -17,14 +17,14 @@
   },
   "dependencies": {
     "@yeoman/types": "^1.5.0",
-    "yeoman-generator": "^7.3.3"
+    "yeoman-generator": "^7.5.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",
     "@types/cpx": "^1.5.5",
     "@types/pluralize": "^0.0.33",
-    "@types/yeoman-generator": "^5.2.14",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "braces": "^3.0.3",
     "coveralls": "^3.1.1",
     "cpx": "^1.5.0",
     "eslint": "^9.16.0",
@@ -35,14 +35,16 @@
     "globals": "^15.13.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.11",
-    "mem-fs": "^4.1.1",
+    "mem-fs": "^4.1.2",
     "pluralize": "^8.0.0",
     "prettier": "^3.4.2",
+    "semver-regex": "^4.0.5",
     "swagger-typescript-api": "^13.0.23",
+    "trim-newlines": "^5.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.0",
-    "yo": "^5.0.0"
+    "yo": "^5.1.0"
   },
   "lint-staged": {
     "*.ts": [
