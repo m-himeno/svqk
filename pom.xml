@@ -19,6 +19,7 @@
     <module>svqk-frontend</module>
     <module>svqk-migration</module>
     <module>svqk-generator</module>
+    <module>svqk-generator-tbdt</module>
   </modules>
 
   <properties>
