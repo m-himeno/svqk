@@ -2,14 +2,10 @@
 
   <taskdef resource="net/sf/antcontrib/antlib.xml" />
 
-  <property name="prjdir" value="${basedir}/.." />
-
-  <condition property="mvn.cmd" value="${prjdir}/mvnw.cmd" else="${prjdir}/mvnw">
-    <os family="windows" />
-  </condition>
-
   <target name="generate">
     <loadfile property="metadata" srcFile="${metadata.path}" />
-    <script language="javascript" src="${basedir}/src/main/build-template-data.js" />
+    <script language="graal.js" src="${basedir}/src/main/build-template-data.js" />
+    <echo file="${project.build.directory}/template-data.json" message="${template.data}"
+      encoding="UTF-8" />
   </target>
 </project>

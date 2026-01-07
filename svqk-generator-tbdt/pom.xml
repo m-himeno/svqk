@@ -16,18 +16,16 @@
   </parent>
 
   <properties>
-    <metadata.path>../svqk-generator/src/main/resources/jeg-metadata.json</metadata.path>
+    <prjdir>${project.basedir}/..</prjdir>
+    <metadata.path>${prjdir}/svqk-generator/src/main/resources/jeg-metadata.json</metadata.path>
 
     <ant.file>${project.basedir}/build.xml</ant.file>
 
     <sonar.skip>true</sonar.skip>
   </properties>
-  <dependencies>
 
-  </dependencies>
   <!-- Build -->
   <build>
-
     <defaultGoal>antrun:run</defaultGoal>
 
     <plugins>
@@ -38,27 +36,25 @@
             <ant antfile="${ant.file}" target="${ant.target}" />
           </target>
         </configuration>
-
         <dependencies>
           <dependency>
             <groupId>org.graalvm.js</groupId>
             <artifactId>js</artifactId>
-            <version>23.0.1</version>
+            <version>25.0.0</version>
+            <type>pom</type>
           </dependency>
           <dependency>
             <groupId>org.graalvm.js</groupId>
             <artifactId>js-scriptengine</artifactId>
-            <version>23.0.1</version>
+            <version>25.0.0</version>
           </dependency>
           <dependency>
             <groupId>org.atteo</groupId>
             <artifactId>evo-inflector</artifactId>
             <version>1.3</version>
           </dependency>
-
         </dependencies>
       </plugin>
-
     </plugins>
   </build>
 
