@@ -2,10 +2,24 @@
 
   <taskdef resource="net/sf/antcontrib/antlib.xml" />
 
+  <macrodef name="exec-tbdt">
+    <attribute name="template" />
+    <attribute name="input" />
+    <attribute name="output" />
+    <attribute name="query" />
+
+    <sequential>
+      <java jar="${tbdt.jar}" fork="true" failonerror="true">
+        <arg line="-t @{template} -i @{input} -o @{output} -q &quot;@{query}&quot;" />
+      </java>
+    </sequential>
+  </macrodef>
+
   <target name="generate">
-    <loadfile property="metadata" srcFile="${metadata.path}" />
-    <script language="graal.js" src="${basedir}/src/main/build-template-data.js" />
-    <echo file="${project.build.directory}/template-data.json" message="${template.data}"
-      encoding="UTF-8" />
+    <exec-tbdt
+      template="${basedir}/src/main/resources/template-data.ftl"
+      input="${metadata.path}"
+      output="${project.build.directory}/template-data.json"
+      query="$" />
   </target>
 </project>
